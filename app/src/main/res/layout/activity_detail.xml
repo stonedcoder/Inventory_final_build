@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin">
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/product_name_label"
+        style="@style/detail_label"
+        android:text="@string/product_name_label"/>
+
+    <TextView
+        android:id="@+id/product_name"
+        android:gravity="right"
+        style="@style/detail_value"
+        android:layout_toRightOf="@id/product_name_label"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/product_price_label"
+        style="@style/detail_label"
+        android:text="@string/product_price_label"
+        android:layout_below="@id/product_name_label"/>
+
+    <TextView
+        android:id="@+id/product_price"
+        style="@style/detail_value"
+        android:gravity="right"
+        android:layout_below="@id/product_name_label"
+        android:layout_toRightOf="@id/product_price_label"/>
+
+    <!-- Availability -->
+
+    <TextView
+        android:id="@+id/product_availability_label"
+        style="@style/detail_label"
+        android:text="@string/product_availability_label"
+        android:layout_below="@id/product_price_label"
+        android:gravity="center_vertical" />
+
+    <LinearLayout
+        android:id="@+id/availability_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/product_price_label"
+        android:layout_toRightOf="@id/product_availability_label">
+
+        <Button
+            android:id="@+id/decrease_count_button"
+            style="@style/adjust_count_button"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/product_availability"
+            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/increase_count_button"
+            style="@style/adjust_count_button"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_image_label"
+        style="@style/detail_label"
+        android:text="@string/product_image_label"
+        android:layout_below="@id/availability_container"
+        android:gravity="center_vertical" />
+
+    <ImageView
+        android:id="@+id/product_image_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/availability_container"/>
+
+    <Button
+        android:id="@+id/supply_order_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/supplier_order_button"
+        android:padding="20dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
