@@ -13,29 +13,30 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <activity
-                    android:name=".EditorActivity"
-                    android:parentActivityName=".CatalogActivity" />
-                <!-- Parent activity meta-data to support 4.0 and lower -->
-                <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".CatalogActivity" />
-                <activity
-                    android:name=".DetailActivity"
-                    android:parentActivityName=".CatalogActivity" >
-                <!-- Parent activity meta-data to support 4.0 and lower -->
-                <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".CatalogActivity" />
-                </activity>
-                <provider
-                    android:name=".data.ProductProvider"
-                    android:authorities="com.jamesvuong.inventoryapp"
-                    android:exported="false" />
+
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EditorActivity"
+            android:parentActivityName=".CatalogActivity" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".CatalogActivity" />
+        <activity
+            android:name=".DetailActivity"
+            android:parentActivityName=".CatalogActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CatalogActivity" />
+        </activity>
+        <provider
+            android:name=".data.ProductProvider"
+            android:authorities="com.jamesvuong.inventoryapp"
+            android:exported="false" />
     </application>
 
 </manifest>
